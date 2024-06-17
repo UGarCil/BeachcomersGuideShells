@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html>
+
+
+<head lang="en">
+	<meta charset="utf-8">
+	<title>Home</title>
+	<style>
+		body {
+			margin: 0;
+		}
+	</style>
+
+	<!-- Important links that ensure correct behavior with custom font, Bootstrap and CSS -->
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@100..800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script> -->
+
+	<!-- <script type="importmap">
+		{
+			"imports": {
+				"three": "./node_modules/three/build/three.module.js"
+			}
+		}
+	</script> -->
+	<!-- <script type="module" crossorigin src="./assets/index-C5RcC9M0.js"></script> -->
+	<script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+	<script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.164.1/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.164.1/examples/jsm/"
+        }
+      }
+    </script>
+	<script type="module" crossorigin src="./ModelHelper.js"></script>
+	<script type="module" crossorigin src="./main.js"></script>
+</head>
+
+<body>
+	<!-- ############### Insert NAVBAR with jQuery ############## -->
+	<!-- <div id="navbarJQ"></div> -->
+
+
+	<!-- <canvas id="background"></canvas> -->
+
+	<!-- ############### Edit text elements in this page ############## -->
+
+	<main class="container-fluid  content-BoxGCU" id="main-content">
+		<div class="row align-items-center">
+			<div class="col-lg-5 content-BoxGCUResearch">
+				<div class="row">
+					<div class="col">
+						<h2>Beachcombers' Guide to Keats Island Shells</h2>
+						<hr>
+						<p>
+							Welcome! This is a guide to identifying the most common shells that can be found on the
+							beaches of
+							Keats
+							Island, British Columbia. This guide will walk you through how to identify these
+							species. Keep in mind that while the vast majority of seashells on Keats Island will be one
+							of the
+							species covered in this guide, there is always the chance of finding something rare! If you
+							aren't
+							sure
+							what something is, post the photo to iNaturalist and experts can help you identify it.
+						</p>
+
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col text-end">
+						<h2>
+							By
+							<a class="customlink" href="https://elsemikkelsen.com/">Else Mikkelsen</a>
+							&
+							<a class="customlink" href="https://urielgarcilazo.com/">Uriel Garcilazo-Cruz</a>
+						</h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-7" id="parent" style="height: 600px; width: 800px;">
+				<canvas id="background">
+				</canvas>
+			</div>
+		</div>
+
+		<div class="row align-items-center content-BoxGCUResearch">
+			<div class="col text-center m-3">
+				<h1>First, some basics:</h1>
+			</div>
+		</div>
+		<div class="row align-items-center content-BoxGCUResearch">
+			<div class="col-lg-6">
+				<hr>
+				<p>
+					Before we get into the species, here are some tips when getting started. If you're already familiar
+					with shells, feel free to skip to the species entries below!
+					There are three main types of animal that leave shells on Keats Island:
+					barnacles, snails, and bivalves. Bivalves include clams, oysters, and similar animals, and their
+					shells have
+					two halves. The spot where the two halves are attached is the hinge, and the details of the bumps on
+					the
+					inside of the shell near the hinge are often very important for identification.
+
+				</p>
+				<hr>
+
+			</div>
+
+			<div class="col-lg-6">
+				<hr>
+				<p>
+					The two halves of
+					the shell are often different at the hinge, so this is important to keep in mind when comparing
+					shells.
+					When taking photos of a shell for identification, aim to take a closeup of the hinge. Also take a
+					photo
+					showing the inside of the shell, the outside of the shell, and a side view showing the sillhouette
+					(showing how flat or curved the shell is).
+					There are nine common bivalves (shellfish) that leave their shells on Keats Island beaches, and six
+					common sea snails.
+
+				</p>
+				<hr>
+
+			</div>
+		</div>
+
+		<!-- ACORN BARNACLES SECTION -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center">
+						<h1>Acorn barnacles</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-8">
+						<hr>
+						<p>
+							Barnacles are not related to the other seashells in this guide, but I couldn't include a
+							guide to Keats seashells without mentioning them. While the rest of the species in this
+							guide are mollusks (related to snails, slugs, octopi, etc), barnacles are actually
+							crustaceans, more closely related to crabs than they are to mussels and clams. The most
+							ubiquitous barnacle on Keats Island is the Pacific Acorn Barnacle, which forms a ring on the
+							rocky bluffs just above the blue mussels. This contributes to the stripey look of our coast
+							from a distance: first bare grey rock above the high tide line, then a white ring of
+							barnacles at the high tide line, followed by the deep blue ring of mussels below. These
+							small white shells will be familiar to any beachgoer who frequents the rocky shores, and can
+							be painful to bare-footed beachgoers!
+						</p>
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/375537649/original.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!-- BLUE MUSSELS SECTION -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Blue Mussels</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									Blue mussels are the most ubiquitous seashell on Keats Island. They attach
+									themselves to
+									the
+									rocky bluffs that encircle the island, forming dense colonies that can be seen as a
+									distinctive blue-black ring around the island, just below the grey ring of
+									barnacles.
+									Where
+									their shells accumulate in large numbers, the fragments can make the entire beach
+									look
+									blue
+									from a distance.
+
+									Their blue colour and elongated shape make them easy to differentiate from other
+									seashells,
+									but despite being our most common shells, our blue mussels are actually considered
+									impossible to identify to species without laboratory tests! This is because there
+									are
+									three
+									species of blue mussel that look essentially identical: Mytilus trossulus, Mytilus
+									edulis,
+									and Mytilus galloprovincialis (you can find more information <a class="customlink"
+										href="https://www.centralcoastbiodiversity.org/pacific-blue-mussel-bull-mytilus-trossulus.html">here</a>).
+									While we may not be able to pinpoint the exact species, this doesn't stop us from
+									appreciating the unique character that these blue mussels give to the rocky coast.
+									When
+									submitting to iNaturalist, you can identify them as "Blue Mussel Complex (Complex
+									Mytilus
+									edulis)" as a catch-all category that encompasses the three possible species.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/66853055/original.jpg"
+									alt="">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/151745770/original.jpg"
+									alt="" style="height: 400px; width:100%; object-fit: cover; ">
+
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/146204861/large.jpg"
+									alt="">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									Blue mussels are the most ubiquitous seashell on Keats Island. They attach
+									themselves to
+									the
+									rocky bluffs that encircle the island, forming dense colonies that can be seen as a
+									distinctive blue-black ring around the island, just below the grey ring of
+									barnacles.
+									Where
+									their shells accumulate in large numbers, the fragments can make the entire beach
+									look
+									blue
+									from a distance.
+
+									Their blue colour and elongated shape make them easy to differentiate from other
+									seashells,
+									but despite being our most common shells, our blue mussels are actually considered
+									impossible to identify to species without laboratory tests! This is because there
+									are
+									three
+									species of blue mussel that look essentially identical: Mytilus trossulus, Mytilus
+									edulis,
+									and Mytilus galloprovincialis (you can find more information <a class="customlink"
+										href="https://www.centralcoastbiodiversity.org/pacific-blue-mussel-bull-mytilus-trossulus.html">here</a>).
+									While we may not be able to pinpoint the exact species, this doesn't stop us from
+									appreciating the unique character that these blue mussels give to the rocky coast.
+									When
+									submitting to iNaturalist, you can identify them as "Blue Mussel Complex (Complex
+									Mytilus
+									edulis)" as a catch-all category that encompasses the three possible species.
+								</p>
+
+							</div>
+						</div>
+
+
+
+
+
+					</div>
+					<div class="row">
+						<div class="col">
+							<p>
+								Keep an eye out for the occasional golden-brown mussel - these are the same species
+								as the blue ones, just a colour variation.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- PACIFIC OYSTER SECTION -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Pacific Oyster</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									The Pacific Oyster is a common sight on Keats Island's rocky beaches. They live
+									their lives with one side of their shell tightly plastered against the rock they are
+									growing on, and so they can grow into rather unusual shapes. The edges and top of
+									the shell are wavy, and grow in flaky layers. The inside of the shell is pearly
+									white. Their unusual shape makes them distinctive from our other Keats Island
+									seashells. While it has not been recorded on Keats Island before, local beachcombers
+									should keep an eye out for any possible Olympia Oysters, a much less common native
+									species. Olympia Oysters are much smaller than Pacific Oysters - only up to 9 cm -
+									but identification is tricky. You can learn more <a
+										href="https://wdfw.wa.gov/sites/default/files/2023-08/psrf-olyguidefinal.pdf"
+										class="customlink">here</a>.
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row align-items-top">
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297293725/original.jpg" alt=""
+							style="height: 600px; width:100%; object-fit: cover; ">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/178268359/original.jpg" alt=""
+							style="height: 450px; width:100%; object-fit: cover; ">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/178268155/original.jpg" alt=""
+							style="height: 450px; width:100%; object-fit: cover; ">
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Nutall's Cockle -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Nutall's Cockle</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									Arguably one of the most distinctive shells on the Keats Island shoreline is
+									Nutall's Cockle. These cockle shells can grow very large - about the size of an
+									adult's fist - but you can also find tiny ones. They sometimes form distinct growth
+									rings across their shells, allowing you to estimate the age of the animal by
+									counting the rings like a tree. Cockles tend to live in deeper water, so most of the
+									ones we find on the beach will be empty shells except at the lowest tide. When we
+									see them out of water, they may look like static shells, but when the live animal is
+									under the water and unstressed, it peers out at the world with eyes on tentacle
+									stocks, and has the ability to jump away from danger with a strong muscular "foot".
+
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297293657/original.jpg"
+									alt="" style="height: 350px; width:100%; object-fit: cover; ">
+
+							</div>
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297297263/original.jpg"
+									alt="" style="height: 350px; width:100%; object-fit: cover; ">
+
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/151741454/original.jpg"
+									alt="">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<hr>
+							<p>
+								Nuttall's Cockle can be distinguished from other Keats Island shells by its
+								distinctive deep ridges that run down the length of the shells and cause the rim to
+								look bumpy. Littleneck clams can also have ridges, but never as deeply grooved as
+								Nuttall's Cockle. Even very small young Nuttall's Cockles still have these
+								distinctive grooves.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297293590/original.jpg" alt="">
+
+					</div>
+					<div class="col-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297293607/original.jpg" alt="">
+					</div>
+					<div class="col-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297293640/original.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Littleneck Clams -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Littleneck Clams</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									Take a look at the range of shapes and colours on these Japanese Littleneck Clams
+									from Plumper's Cove. The freshest ones have purple interiors, but the older ones
+									have faded to white.
+								</p>
+								<p>
+									There are two species of littleneck clams on Keats Island: the Pacific Littleneck
+									Clam (native to the region) and the Japanese Littleneck Clam (an introduced
+									species). Both species live buried under the sediment in the intertidal zone, so
+									live animals are uncommon to see, but their empty shells are abundant on our
+									beaches. They are medium size shells that are usually white to grey, and may have
+									mottled markings. They have ridges that run down their shell like a cockle, but
+									these ridges are not nearly as deep and distinct as Nutall's Cockle.
+
+									Japanese and Pacific Littleneck Clam are vey similar, but can be distinguished by
+									three subtle features:
+
+								<ul>
+									<li>1) Pacific Littleneck Clam tends to be more rounded, while Japanese Littleneck
+										Clam
+										tends to have a bit of an indent beside the shell's hinge that makes it look
+										more
+										asymmetrical. This takes a bit of practice to notice and is best appreciated by
+										seeing the two species side-by-side.</li>
+									<li>2) Pacific Littleneck Clam has bumpy "teeth" along the inside of the rim of the
+										shell. These are very small, but can be felt by running your finger along the
+										edge
+										if the shell. Japanese Littleneck has a smooth edge without these bumps. Keep in
+										mind that old, worn-out shells of the Pacific Littleneck can sometimes have the
+										teeth worn away.</li>
+									<li>3) Japanese Littleneck Clams usually have a purple shine on the inside of their
+										shell, which Pacific Littleneck lacks.</li>
+								</ul>
+
+
+
+
+
+
+								</p>
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/302814278/original.jpg"
+									alt="" style="height: 500px; width:100%;object-fit: cover;">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/302814328/original.jpg"
+									alt="" style="height: 500px; width:100%;object-fit: cover;">
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col">
+							<hr>
+							<p>
+								Here is a closeup of a living Japanese Littleneck Clam. When the shell is together, the
+								indent looks as though someone pressed the shell in with their thumb to one side of the
+								hinge. While subtle, this is enough to identify living clams without needing to see the
+								colour and teeth on the inside of the shell.
+							</p>
+
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/302814716/original.jpg" alt="">
+
+					</div>
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/302814671/original.jpg" alt="">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col pt-4">
+						<p>
+							Compare the shapes above to the Pacific Littleneck Clam, which is more round with less of an
+							indent. Instead, the shell is straight where it would be indented on the Japanese
+							Littleneck.
+							Can you spot the tiny ridges of "teeth" on the edge of the shell?
+						</p>
+
+					</div>
+				</div>
+				<div class="row pt-3">
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297772849/original.jpg" alt="">
+
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297772818/original.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/302800354/original.jpg" alt="">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Purple Mahogany Clam SECTION -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Purple Mahogany Clam</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									This distinctive species is abundant on our beaches. Originally from the other side
+									of the Pacific, it was accidentally introduced to our area by ships. It can be
+									quickly distinguished from our other clams by its distinctive colour: purple-violet
+									on the inside and brown on the outside. The brown layer on the top peels off like
+									the bark of a birch tree, revealing greyish-purple shell underneath. Even when the
+									colours have faded, this shell is distinctive in its thin, flat shape.
+
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row align-items-top">
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292740/original.jpg" alt=""
+							style="height: 600px; width:100%; object-fit: cover; ">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292754/original.jpg" alt=""
+							style="height: 600px; width:100%; object-fit: cover; ">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/151740445/original.jpg" alt=""
+							style="height: 600px; width:100%; object-fit: cover; ">
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Soft-shelled Clam SECTION -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Soft-shelled Clam</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									The Soft-shelled Clam is named for its thin, weak shell. They can be found on our
+									beaches wherever there is a muddy seafloor for them to burrow into. They can grow
+									large, but their shells are not particularly strong - they rely on hiding in the mud
+									to protect themselves. Their shells are whitish, narrow, and elongated. One end is
+									able to close, but the other has a gap where the animal sticks out. They can be
+									distinguished from our other common clams by their long shape, weak shells, and
+									asymmetrical sides. A surefire way to recognize them is by inspecting the hinge on
+									the inside of the shell. One shell has a tall flat flange sticking up, and the other
+									shell has a flat area where this flange can interlock to keep the two halves of the
+									shell together. This structure is unique - compare the photos of the hinge to the
+									otherspecies in ths guide.
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-lg-6">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297796223/original.jpg"
+									alt="" style="height: 300px; width: 100%;object-fit: cover;">
+							</div>
+							<div class="col-lg-6">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297298071/original.jpg"
+									alt="" style="height: 300px; width: 100%;object-fit: cover;">
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297298042/original.jpg"
+									alt="" style="height: 100%; width:100%;object-fit: cover;">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row pt-3">
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/302815196/original.jpg" alt="">
+
+					</div>
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/302815226/original.jpg" alt="">
+					</div>
+				</div>
+
+
+			</div>
+
+		</div>
+
+		<!-- Fat Gaper and Butter Clam -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Fat Gaper and Butter Clam</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col">
+								<hr>
+								<p>
+									Fat Gaper and Butter Clam are our two species of large clams with strong shells.
+									They can grown much larger than littleneck clams! At first glance, the Fat Gaper and
+									Butter Clam can be tricky to tell apart, but one key is to look at the hinge on the
+									inside of the shell. The Fat Gaper has a deep hollowed-out circular indent where the
+									muscles of the live animal would have attached. The Butter Clam doesn't have this
+									circle - instead it has tooth-like points in the hinge that stick up, allowing the
+									two sides of the shell to lock together. These clams normally live their lives
+									buried deep in the mud, with only the tips of their muscular siphons sticking out to
+									filter food out of the water.
+
+									Here are some Butter Clams - they don't have the circular indent on the inside of
+									their hinges
+								</p>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297297593/original.jpg"
+									alt="" style="height:320px;width: 100%;object-fit: cover;">
+							</div>
+						</div>
+
+
+
+
+					</div>
+					<div class="col-lg-6 ">
+						<div class="row">
+							<div class="col">
+								<img class="img-fluid"
+									src="https://inaturalist-open-data.s3.amazonaws.com/photos/297772930/original.jpg"
+									alt="" style="height: 100%; width:100%;">
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+
+				<div class="row pt-3">
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297772968/original.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297297643/original.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297297626/original.jpg" alt="">
+					</div>
+
+				</div>
+
+				<div class="row pt-3">
+					<div class="col">
+						Compare the above Butter Clams to the photos of Fat Gapers below. Note the circular indent on
+						the inside of the Fat Gaper's shell near its hinge. Note also that the shell does not sit flat -
+						there is still a gap where the animal would have stuck out.
+					</div>
+
+				</div>
+
+				<div class="row pt-3">
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292400/original.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292534/large.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292518/large.jpg" alt="">
+					</div>
+
+				</div>
+
+				<div class="row pt-3">
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292581/large.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292549/large.jpg" alt="">
+					</div>
+					<div class="col-lg-4">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297292445/original.jpg" alt="">
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+		<!-- Pointed Macoma  -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Pointed Macoma</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+
+						<p>
+							The last clam on our list is the Pointed Macoma, a medium-sized clam (up to 55.5 cm). It is
+							thinner and more pointed than the littleneck clams, and often has peeling remnants of an
+							olive-brown layer on the surface of the shell. The shells have ridges that only run parallel
+							to the edge of the shell, further distinguishing them from the two littleneck clams that
+							have ridges running in two different directions that crisscross (radial ribs and commarginal
+							ribs). Butter Clams can look similar when they are small, but the shapes are different:
+							Pointed Macomas are pointed on one side, like their name suggests, while Butter Clams are
+							rounded. The shape is also different around the hinge: the Macomas point straight back,
+							while Butter Clams are slightly crooked. A closeup look at the teeth on the hinge can also
+							quickly differentiate them (compare the closeup photos). Soft-shelled Clam can also look
+							rather similar at first glance, but has a very different inside of the hinge (compare
+							photos).
+
+							Lookalikes to watch for: they are several other Macoma species in the region, though I have
+							personally only found Pointed Macoma on Keats Island. One to watch for is Bent-nosed Clam (a
+							type of Macoma). Differentiating Macomas requires a careful examination of the shell details
+							(and a dive into shell terminology). In Bent-nosed Clam, the pallial line on the left valve
+							partially overlaps with the anterior adductor scar <a
+								href="https://oimb.uoregon.edu/wp-content/uploads/2019/03/M_nasuta_2019.pdf"
+								class="customlink">(source
+								with more info)</a>
+							Another to watch for is Baltic Macoma, which is pink, not pointed, and does not get as big.
+						</p>
+
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Frilled Dogwinkle  -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Frilled Dogwinkle</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+
+						<p>
+							This large sea snail hunts barnacles and mussels on our rocky shores. Its large, spiralling
+							shells are distinctive amongst the Keats Island fauna.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297622099/original.jpg" alt="">
+					</div>
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/297622113/original.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Littorina periwinkles  -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col">
+				<div class="row">
+					<div class="col text-center ">
+						<h1>Littorina periwinkles</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col">
+
+						<p>
+							These tiny sea snails are very abundant on the rocky beach of Keats Island, where they often
+							cover the rocks. There are much smaller than dogwingles. There are at least two species of
+							Periwinkles on Keats Island: the Checkered Periwinkle and the Sitka Periwinkle. The two are
+							similar, but Sitka is stouter, and is ringed by bumpy ridges around its shell.
+						</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/177867148/original.jpg" alt="">
+					</div>
+					<div class="col-lg-6">
+						<img class="img-fluid"
+							src="https://inaturalist-open-data.s3.amazonaws.com/photos/177867160/original.jpg" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Limpets  -->
+		<div class="row align-items-center content-BoxGCUResearch mt-3">
+			<div class="col p-5">
+				<div class="row">
+					<div class="col text-center">
+						<h1>Limpets</h1>
+						<hr>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6">
+						<hr>
+						<p>
+							There are three common species of limpet om Keats Island: the Shield Limpet, Mask Limpet,
+							and Plate Limpet. All three can be found grazing on the rocks and cliffs on the Keats Island
+							beaches. When underwater, the limpet slowly crawls over the rocks, scraping algae with its
+							tongue-like radula. When the tide goes out, they cling tightly to the rock or shell that
+							they find themselves on, waiting for the water to return.
+						</p>
+						<p>
+							The Mask Limpet (Lottia persona) is a large species with an inflated look, caused by the
+							sides being convex (bulging outwards). The highest point of the shell is off-centre, towards
+							the end where the animal's head would stick out (image to the right). This species is taller
+							than the Plate
+							Limpet: Mask Limpets are more than 1/3 as tall as they are long, while Plate Limpets are
+							less than 1/3 as tall as they are long. Like Plate Limpets, the inside of empty shells have
+							a dark spot in the middle, and a checkered pattern around the edges.
+
+						</p>
+					</div>
+					<div class="col-lg-6">
+						<img class="img-fluid" src="./Media/limpetMed.gif" alt=""
+							style="height: 90%; width:auto; object-fit: cover;">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col pt-5">
+						<p>The Plate limpet (Lottia scutum) is a short, flatenned species. The highest point of the
+							shell is just slightly off-centre towards the end where the animal's head would stick out.
+							It tends to be oval, being longer than it is wide. Like Mask Limpets, the inside of empty
+							shells have a dark spot in the middle, and a checkered pattern around the edges.
+
+							The Shield Limpet (Lottia pelta) is similar to the Plate Limpet, but not as flat. It comes
+							in a wide range of colours and patterns.</p>
+					</div>
+
+				</div>
+			</div>
+
+
+		</div>
+	</main>
+
+
+
+	<!-- ############### Reading FOOTER with jQuery ############## -->
+	<!-- <div id="footerJQ"></div> -->
+
+
+	<!-- ################ SCRIPTS ################################### -->
+	<script>
+		$("#navbarJQ").load("./navbar.html");
+		$("#footerJQ").load("./footer.html");
+	</script>
+
+
+</body>
+
+</html>

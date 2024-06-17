@@ -1,1 +1,1 @@
-# BeachcomersGuideShells
+A guide to the most common shells from Keats Island
